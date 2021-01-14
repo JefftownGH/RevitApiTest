@@ -1,0 +1,15 @@
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\obj\Debug\RevitTest.csproj.CoreCompileInputs.cache
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\RevitTest.dll
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\RevitTest.pdb
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\obj\Debug\RevitTest.dll
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\obj\Debug\RevitTest.pdb
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\obj\Debug\RevitTest.csprojAssemblyReference.cache
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\WpfDisplay.exe
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\WpfDisplay.pdb
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\WpfDisplay.exe.config
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\obj\Debug\RevitTest.csproj.CopyComplete
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\MaterialDesignColors.dll
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Aifoe\source\repos\RevitTest\RevitTest\bin\Debug\MaterialDesignThemes.Wpf.xml

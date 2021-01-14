@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfDisplay.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDisplay"
+        mc:Ignorable="d"
+        Title="Information" Height="560" Width="810"
+		
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+		>
+
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="pack://application:,,,/WpfDisplay;component/MaterialDesign.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="487*"/>
+			<RowDefinition Height="34*"/>
+		</Grid.RowDefinitions>
+		<TextBox x:Name="textBox" BorderBrush="LightSteelBlue" BorderThickness="5" Margin="30,47,0,0" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262">Input name or guid</TextBox>
+		<Button x:Name="filterButton" Content="filter" Margin="83,104,0,0" Click="filter_Button" HorizontalAlignment="Left" Width="137" Height="27" VerticalAlignment="Top" />
+		<Button x:Name="showAllButton" Content="show all elements" Click="showAll_Button" Margin="83,158,0,0" HorizontalAlignment="Left" Width="137" Height="27" VerticalAlignment="Top"/>
+		<Border Background="AliceBlue" BorderBrush="Gainsboro" BorderThickness="1" Margin="320,0,-0.4,0" HorizontalAlignment="Left" Width="474" Height="487" VerticalAlignment="Top">
+			<StackPanel Margin="10">
+				<DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Height="465" >
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"  />
+						<DataGridTextColumn Header="GUID" Binding="{Binding Path=Id}"  />
+					</DataGrid.Columns>
+				</DataGrid>
+			</StackPanel>
+		</Border>
+
+		<materialDesign:Card Grid.Row="0" Margin="30,237,0,0" HorizontalAlignment="Left" Width="262" Height="151" VerticalAlignment="Top" Background="AliceBlue">
+			<Image Source="Images/RevitBuilding.png" ></Image>
+		</materialDesign:Card>
+	</Grid>
+</Window>
