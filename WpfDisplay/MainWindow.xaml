@@ -32,6 +32,7 @@
 		<TextBox x:Name="textBox" BorderBrush="LightSteelBlue" BorderThickness="5" Margin="30,47,0,0" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262">Input name or guid</TextBox>
 		<Button x:Name="filterButton" Content="filter" Margin="83,104,0,0" Click="filter_Button" HorizontalAlignment="Left" Width="137" Height="27" VerticalAlignment="Top" />
 		<Button x:Name="showAllButton" Content="show all elements" Click="showAll_Button" Margin="83,158,0,0" HorizontalAlignment="Left" Width="137" Height="27" VerticalAlignment="Top"/>
+		<Button x:Name="loggerButton" Content="make log" Click="loggerButton_Click" HorizontalAlignment="Left" Width="137" Height="27" VerticalAlignment="Top" Margin="83,206,0,0"/>
 		<Border Background="AliceBlue" BorderBrush="Gainsboro" BorderThickness="1" Margin="320,0,-0.4,0" HorizontalAlignment="Left" Width="474" Height="487" VerticalAlignment="Top">
 			<StackPanel Margin="10">
 				<DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Height="465" >
@@ -43,7 +44,7 @@
 			</StackPanel>
 		</Border>
 
-		<materialDesign:Card Grid.Row="0" Margin="30,237,0,0" HorizontalAlignment="Left" Width="262" Height="151" VerticalAlignment="Top" Background="AliceBlue">
+		<materialDesign:Card Grid.Row="0" Margin="30,277,0,0" HorizontalAlignment="Left" Width="262" Height="185" VerticalAlignment="Top" Background="AliceBlue">
 			<Image Source="Images/RevitBuilding.png" ></Image>
 		</materialDesign:Card>
 	</Grid>

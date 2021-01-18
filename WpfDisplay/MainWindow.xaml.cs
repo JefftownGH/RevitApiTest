@@ -1,20 +1,11 @@
 ﻿using MaterialDesignColors;
 using MaterialDesignThemes.Wpf;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfDisplay
 {
@@ -25,10 +16,7 @@ namespace WpfDisplay
 		{
 			Assembly.LoadFrom(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "MaterialDesignThemes.Wpf.dll"));
 			Assembly.LoadFrom(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "MaterialDesignColors.dll"));
-
-			/*ColorZoneAssist.SetMode(new CheckBox(), ColorZoneMode.Accent);
-			Hue hue = new Hue("xyz", System.Windows.Media.Color.FromArgb(1, 2, 3, 4), System.Windows.Media.Color.FromArgb(1, 5, 6, 7));
-*/
+						
 			InitializeComponent();
 		}
 		public void LoadData(List<Data> dataList)
@@ -59,6 +47,27 @@ namespace WpfDisplay
 		private void showAll_Button(object sender, RoutedEventArgs e)
 		{
 			LoadData(dataList);
+		}
+		private void loggerButton_Click(object sender, RoutedEventArgs e)
+		{
+			Log.Logger = new LoggerConfiguration()
+				.MinimumLevel.Debug()
+				.WriteTo.File("Logs\\ButtonLog.txt", rollingInterval: RollingInterval.Day)
+				.CreateLogger();
+
+			Log.Information("Hello, world!");
+
+			int a = 10, b = 0;
+			try
+			{
+				Log.Debug("Dividing {A} by {B}", a, b);
+				MessageBox.Show("Log created");
+			}
+			catch (Exception ex)
+			{
+				Log.Error(ex, "Something went wrong");
+			}
+			Log.CloseAndFlush();
 		}
 	}
 }
